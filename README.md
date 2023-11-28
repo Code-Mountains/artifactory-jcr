@@ -122,3 +122,18 @@ curl -XPOST -vu admin:password http://localhost:8082/artifactory/ui/jcr/eula/acc
 <
 * Connection #0 to host localhost left intact
 ```
+
+# SSL Setup
+```
+ 
+sudo cp etc/nginx/sites-available/artifactory.conf /etc/nginx/sites-available/
+
+sudo ln -s /etc/nginx/sites-available/artifactory.conf /etc/nginx/sites-enabled/artifactory.conf
+
+sudo nginx -t
+
+sudo systemctl reload nginx
+
+sudo systemctl restart nginx
+
+```
